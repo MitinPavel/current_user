@@ -1,3 +1,4 @@
-CurrentUser::Application.routes.draw do
+CurrentUser::Engine.routes.draw do
   resources :sessions, :only => [:new, :create]
 end
+ 

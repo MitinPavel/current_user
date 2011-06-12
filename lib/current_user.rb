@@ -1,5 +1,2 @@
 require "current_user/version"
-
-module CurrentUser
-  # Your code goes here...
-end
+require 'current_user/engine'
