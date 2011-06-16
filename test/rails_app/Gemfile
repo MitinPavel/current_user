@@ -14,6 +14,8 @@ gem 'coffee-script'
 gem 'uglifier'
 gem 'therubyracer'
 
+gem 'current_user', :path => '../../'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
