@@ -15,7 +15,13 @@ class SignInFormTest < ActionController::IntegrationTest
     assert_select 'h2', 'Sign in'
   end
 
-  test 'title' do
-    pending
-  end
+  test 'link for each existing user' do
+    User.create! :email => 'john.doe@example.com'
+    do_request
+    elements = css_select '#resources .resource'
+    #TODO check elements
+  end 
+
+  test('meaningful message if there is no user') { pending }
+  test('title') { pending }
 end

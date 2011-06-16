@@ -2,6 +2,11 @@
 
 <%#= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 <%= form_tag :url => 'users/sign_in' do %>
+
+  <ul id='resources'>
+    <%= render :partial => 'resource', :collection => @resources, :locals => { :id_method_name => @id_method_name } %>
+  </ul>
+
   <p><%#= f.label :email %><br />
   <%#= f.email_field :email %></p>
 
