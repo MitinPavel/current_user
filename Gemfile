@@ -9,3 +9,5 @@ group :test do
   gem "sqlite3-ruby"
 end
 
+gem "capybara"
+
