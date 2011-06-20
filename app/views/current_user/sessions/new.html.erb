@@ -1,14 +1,14 @@
 <h2>Sign in</h2>
 
-<%#= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-<%= form_tag :url => 'users/sign_in' do %>
+<%= form_for(@resource, :as => @resource_name, :url => session_path(@resource_name)) do |f| %>
 
-  <ul id='resources'>
-    <%= render :partial => 'resource', :collection => @resources, :locals => { :id_method_name => @id_method_name } %>
-  </ul>
+  <p>
+    <%= f.label @id_method_name %>
+    <%= f.select @id_method_name, options_from_collection_for_select(@resources, @id_method_name, @id_method_name) %>
+  </p>
 
   <p><%#= f.label :email %><br />
   <%#= f.email_field :email %></p>
 
-  <p><%= submit_tag "Sign in" %></p>
+  <p><%= f.submit "Sign in" %></p>
 <% end %>
