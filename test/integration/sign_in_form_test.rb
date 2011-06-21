@@ -14,28 +14,15 @@ class SignInFormTest < ActionController::IntegrationTest
 
   test 'successful sign in' do
     User.create! :email => 'john.doe@example.com'
+    User.create! :email => 'jill@example.com'
 
     visit sign_in_path
-    select 'john.doe@examle.com', :from => 'Email'
+    select 'john.doe@example.com', :from => 'Email'
+    click_on 'Sign in' 
+
+    assert page.has_content?('Welcome john.doe@example.com'), "Sign in is successful"
   end
 
-#
-#  test 'the response status is success' do
-#    do_request
-#    assert_response :success
-#  end
-#
-#  test 'meaningful heading' do
-#    do_request assert_select 'h2', 'Sign in'
-#  end
-#
-#  test 'link for each existing user' do
-#    User.create! :email => 'john.doe@example.com'
-#    do_request
-#    elements = css_select '#resources .resource'
-#    #TODO check elements
-#  end 
-#
   test('meaningful message if there is no user') { pending }
   test('title') { pending }
 end
