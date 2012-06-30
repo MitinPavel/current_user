@@ -45,7 +45,6 @@ class LoginTest < ActionDispatch::IntegrationTest
     assert_user_sees_unauthorized_error
   end
 
-  test "helper methods in views" do end
   test "all users in the application database are listed in the signin page" do end
 end
 
