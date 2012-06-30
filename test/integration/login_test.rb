@@ -12,12 +12,12 @@ class LoginTest < ActionDispatch::IntegrationTest
   test "repeated successful login process" do
     visit sing_in_page_path
     assert_equal 200, page.status_code, 'Responds with the OK http status code'
-    page.click_link_or_button 'Login as admin@my.app.com'
+    page.click_link_or_button 'admin@my.app.com'
     assert page.has_content?('Welcome admin@my.app.com'), 'Contains the welcome message for the first user'
 
     visit sing_in_page_path
     assert_equal 200, page.status_code, 'Responds with the OK http status code'
-    page.click_link_or_button 'Login as member@some.app.com'
+    page.click_link_or_button 'member@some.app.com'
     assert page.has_content?('Welcome member@some.app.com'), 'Contains the welcome message for the second user'
   end
 

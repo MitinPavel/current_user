@@ -1,8 +1,8 @@
-<h1>Sign In</h1>
+<h1>Sign in as</h1>
 
 <% @users.each do |user| %>
   <%= form_tag @sign_in_url do %>
     <%= hidden_field_tag 'user_id', user.id %>
-    <%= submit_tag "Login as #{user.email}" %>
+    <%= submit_tag user.email %>
   <% end %>
 <% end %>
