@@ -2,6 +2,7 @@
 
 <% @users.each do |user| %>
   <%= form_tag key_sign_in_url('1234') do %>
+    <%= hidden_field_tag 'user_id', user.id %>
     <%= submit_tag "Login as #{user.email}" %>
   <% end %>
 <% end %>

@@ -1,3 +1,4 @@
+require 'current_user/constants'
 require 'current_user/controller_methods'
 
 module CurrentUser
