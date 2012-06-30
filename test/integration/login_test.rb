@@ -28,7 +28,7 @@ class LoginTest < ActionDispatch::IntegrationTest
     assert_equal 401, page.status_code, 'Responds with the unauthorized http status code'
   end
 
-  test "all users in the application database are available to be login under" do end
+  test "all users in the application database are listed in the signin page" do end
   test "logout" do
     # login
     # check out you see a protected page
