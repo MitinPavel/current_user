@@ -37,4 +37,13 @@ rails generate current_user:install
 
 It creates a file with a unique key for your application. CurrentUser use the key to obscure access to the signin page.
 
+Mount the CurrentUser engine and specify root in `config/routes.rb`:
 
+ ```ruby
+   mount CurrentUser::Engine => '/current_user'
+   root :to => 'dashboards#show'
+ ```
+
+TODO
+ * run the rake task to see how the signin url looks like
+ * send an email to your customer
