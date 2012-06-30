@@ -8,7 +8,8 @@ class LoginTest < ActionDispatch::IntegrationTest
   end
 
   test "successful login" do
-    get '/current_user/keys/1234/sign_in'
+    get 'current_user/keys/12345/sign_in/new'
+
   end
 
   test "an obscure key" do end
