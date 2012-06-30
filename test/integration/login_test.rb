@@ -1,6 +1,8 @@
 require 'integration_test_helper'
 
 class LoginTest < ActionDispatch::IntegrationTest
+  fixtures :all
+
   test "unauthorized user sees the 401 error page" do
     visit '/my_protected_page'
     assert page.has_content?('Unauthorized'), 'Should contain unauthorized message'

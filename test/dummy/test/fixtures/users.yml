@@ -1,0 +1,5 @@
+admin:
+  email: admin@my.app.com
+
+member:
+  email: member@some.app.com
