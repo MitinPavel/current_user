@@ -1,7 +1,7 @@
 <h1>Sign In</h1>
 
 <% @users.each do |user| %>
-  <% form_tag request.url do %>
+  <%= form_tag key_sign_in_url('1234') do %>
     <%= submit_tag "Login as #{user.email}" %>
   <% end %>
 <% end %>

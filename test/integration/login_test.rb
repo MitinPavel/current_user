@@ -14,7 +14,6 @@ class LoginTest < ActionDispatch::IntegrationTest
     assert_equal page.status_code, 200, 'Should respond with the OK http status code'
 
     page.click_link_or_button 'Login as admin@my.app.com'
-    page.click_link 'admin@my.app.com'
     assert page.has_content?('Welcome admin@my.app.com')
   end
 
