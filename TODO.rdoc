@@ -5,3 +5,4 @@
 * Add an ability to use an arbitrary class instead of User.
 * Create some kind of "convinient" logout url, which effectivelly will take users to the sign_in page
 * Show on the signin page a message "Your database doesn't contain users" if it is actual
+* Create rake tasks to recreate the auth key and to display how the signin url looks like

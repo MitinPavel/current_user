@@ -1,4 +1,4 @@
-# CurrentUser
+# cU
 
 Dev phase auth for Rails.
 
@@ -39,10 +39,10 @@ It creates a file with a unique key for your application. CurrentUser use the ke
 
 Mount the CurrentUser engine and specify root in `config/routes.rb`:
 
- ```ruby
-   mount CurrentUser::Engine => '/current_user'
-   root :to => 'dashboards#show'
- ```
+```ruby
+mount CurrentUser::Engine => '/current_user'
+root :to => 'dashboards#show'
+```
 
 TODO
  * run the rake task to see how the signin url looks like
