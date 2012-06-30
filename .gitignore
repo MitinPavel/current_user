@@ -1,1 +1,4 @@
 .idea/
+
+test/dummy/log/
+test/dummy/db/
