@@ -1,2 +1,7 @@
-<h1>SessionsController#new</h1>
-<p>Find me in app/views/current_user/sessions_controller/new.html.erb</p>
+<h1>Sign In</h1>
+
+<% @users.each do |user| %>
+  <% form_tag request.url do %>
+    <%= submit_tag "Login as #{user.email}" %>
+  <% end %>
+<% end %>
