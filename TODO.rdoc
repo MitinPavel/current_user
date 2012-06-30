@@ -1,4 +1,5 @@
 = TODO
 
-* Add I18n
-* Redirect to a root url of the parent app after a successful login
+* Add I18n.
+* Redirect to a root url of the parent app after a successful login.
+* Add an ability to use an arbitrary class instead of User.
