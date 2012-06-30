@@ -1,0 +1,3 @@
+= CurrentUser
+
+Dev phase auth for Rails.
