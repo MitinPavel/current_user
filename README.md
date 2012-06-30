@@ -1,4 +1,4 @@
-= CurrentUser
+# CurrentUser
 
 Dev phase auth for Rails.
 
@@ -7,7 +7,7 @@ Dev phase auth for Rails.
 CurrentUser works with Rails 3.2. Add it to your Gemfile with:
 
 ```ruby
-gem 'current_user'
+gem 'current_user', :git => 'git://github.com/MitinPavel/current_user.git'
 ```
 
 Install it using bundler:
