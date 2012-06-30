@@ -12,6 +12,10 @@ module CurrentUser
 
         ::User.find_by_id user_id
       end
+
+      def signed_in?; end
+      def user_signed_in?; end
+      def sign_out; end
     end
   end
 end

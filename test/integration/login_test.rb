@@ -30,5 +30,6 @@ class LoginTest < ActionDispatch::IntegrationTest
     # go to the login page one more time
     # try to return to the protected page
   end
+  test "helper methods in views"
 end
 
