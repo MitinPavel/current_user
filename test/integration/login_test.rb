@@ -7,5 +7,10 @@ class LoginTest < ActionDispatch::IntegrationTest
     assert response.body.include?('Unauthorized'), 'Should contain unauthorized message'
   end
 
+  test "successful login" do
+    get '/current_user/keys/1234/sign_in'
+  end
+
+  test "an obscure key" do end
 end
 
