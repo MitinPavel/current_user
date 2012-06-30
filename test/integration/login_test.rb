@@ -10,19 +10,24 @@ class LoginTest < ActionDispatch::IntegrationTest
   end
 
   test "repeated successful login process" do
-    sign_in_path = '/current_user/keys/12345/sign_in/new'
-    visit sign_in_path
+    visit sing_in_page_path
     assert_equal 200, page.status_code, 'Responds with the OK http status code'
     page.click_link_or_button 'Login as admin@my.app.com'
     assert page.has_content?('Welcome admin@my.app.com'), 'Contains the welcome message for the first user'
 
-    visit sign_in_path
+    visit sing_in_page_path
     assert_equal 200, page.status_code, 'Responds with the OK http status code'
     page.click_link_or_button 'Login as member@some.app.com'
     assert page.has_content?('Welcome member@some.app.com'), 'Contains the welcome message for the second user'
   end
 
-  test "an obscure key" do end
+  test "invalide key" do
+    invalid_key = '54321'
+    visit sing_in_page_path(invalid_key)
+    assert page.has_content?('Unauthorized'), 'Contains "unauthorized" message'
+    assert_equal 401, page.status_code, 'Responds with the unauthorized http status code'
+  end
+
   test "all users in the application database are available to be login under" do end
   test "logout" do
     # login
@@ -31,5 +36,11 @@ class LoginTest < ActionDispatch::IntegrationTest
     # try to return to the protected page
   end
   test "helper methods in views" do end
+
+  private
+
+  def sing_in_page_path(key = '12345')
+    "/current_user/keys/#{key}/sign_in/new"
+  end
 end
 

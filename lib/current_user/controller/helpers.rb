@@ -3,7 +3,7 @@ module CurrentUser
     module Helpers
       def authenticate_user!
         if current_user.nil?
-          render :text => 'Unauthorized', :status => :unauthorized
+          render_unauthorized
         end
       end
 
@@ -16,6 +16,12 @@ module CurrentUser
       def signed_in?; end
       def user_signed_in?; end
       def sign_out; end
+
+      private
+
+      def render_unauthorized
+        render :text => 'Unauthorized', :status => :unauthorized
+      end
     end
   end
 end
