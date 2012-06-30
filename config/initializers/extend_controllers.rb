@@ -1,1 +1,1 @@
-ActionController::Base.send :include, ::CurrentUser::ControllerMethods
+ActionController::Base.send :include, ::CurrentUser::Controller::Helpers
