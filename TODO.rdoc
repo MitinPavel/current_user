@@ -1,7 +1,6 @@
 = TODO
 
 * Add I18n.
-* Redirect to a root url of the parent app after a successful login.
 * Add an ability to use an arbitrary class instead of User.
 * Create some kind of "convinient" logout url, which effectivelly will take users to the sign_in page
 * Show on the signin page a message "Your database doesn't contain users" if it is actual

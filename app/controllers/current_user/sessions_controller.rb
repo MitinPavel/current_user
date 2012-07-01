@@ -11,7 +11,7 @@ module CurrentUser
 
     def create
       session[::CurrentUser::USER_SESSION_KEY] = params[:user_id]
-      redirect_to '/'
+      redirect_to main_app.root_url
     end
 
     private
