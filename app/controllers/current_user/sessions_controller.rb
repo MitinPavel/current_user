@@ -35,7 +35,7 @@ module CurrentUser
       identifier = ::CurrentUser.identifier
 
       if identifier.respond_to? :call
-        ::User.all.sort { |x,y| identifier.call(y) <=> identifier.call(x) }
+        ::User.all.sort { |x,y| identifier.call(x) <=> identifier.call(y) }
       else
         ::User.order identifier.to_s
       end
