@@ -1,6 +1,12 @@
 module CurrentUser
   module Controller
     module Helpers
+      def self.included(base)
+        helpers = %w(authenticate_user! current_user sign_in sign_out signed_in? user_signed_in?)
+        base.hide_action *helpers
+        base.helper_method *helpers
+      end
+
       def authenticate_user!
         if current_user.nil?
           render_unauthorized
