@@ -28,8 +28,39 @@ Install it using bundler:
 bundle install
 ```
 
-__Note__: CurrentUser assumes your application already has a few users in its database. So if the assumption is false,
-generate User activerecord model and insert users in db. It might look like:
+__Note__: CurrentUser assumes your application already has a few users in its database.
+So if the assumption is false, please see "Add users to database" section
+and return to the getting started guide.
+
+Run the generator:
+
+```console
+rails generate current_user:install
+```
+
+The generator:
+* creates a file with a unique authentication key for your application
+* creates an initializer
+* inject routing to your application
+* show README
+
+Specify root in `config/routes.rb`:
+
+```ruby
+root :to => 'dashboards#show'
+```
+
+Run a rake task what shows a path to your sign in page:
+```console
+rake current_user:sign_in_path
+```
+
+Congratulations. Your application has a simple authentication solution.
+
+## Add users to database
+
+CurrentUser assumes your application already has a few users in a database.
+So if the assumption is false, generate User activerecord model and insert users in db. It might look like:
 
 ```console
 rails g model User email:string
@@ -41,21 +72,6 @@ rails c
 User.create! :email => 'some.email@mailinator.com'
 ```
 
-If there is no problem with users, run the generator:
+## License
 
-```console
-rails generate current_user:install
-```
-
-It creates a file with a unique key for your application. CurrentUser use the key to obscure access to the signin page.
-
-Mount the CurrentUser engine and specify root in `config/routes.rb`:
-
-```ruby
-mount CurrentUser::Engine => '/current_user'
-root :to => 'dashboards#show'
-```
-
-TODO
- * run the rake task to see how the signin url looks like
- * send an email to your customer
+It uses MIT license. See MIT-LICENSE file in the root directory.
