@@ -15,6 +15,12 @@ module CurrentUser
         template "current_user.rb", "config/initializers/current_user.rb"
       end
 
+      def mount_routing
+        inject_into_file 'config/routes.rb', :after => "Rails.application.routes.draw do" do
+          "\n  mount CurrentUser::Engine => '/current_user'\n\n"
+        end
+      end
+
       def show_readme
         readme "README" if behavior == :invoke
       end
