@@ -21,4 +21,12 @@ module CurrentUser
     end
   end
   module_function :identifier_for
+
+  def read_authentication_key
+    key_file_path = File.expand_path 'config/current_user/key', Rails.root
+    if File.exist? key_file_path
+      File.open(key_file_path) { |f| f.readline }
+    end
+  end
+  module_function :read_authentication_key
 end
