@@ -6,7 +6,7 @@ module CurrentUser
 
     def new
       @users = ::User.order 'email'
-      @sign_in_url = key_sign_in_url ::CurrentUser::Config.instance.key
+      @sign_in_url = key_sign_in_url ::CurrentUser.authentication_key
     end
 
     def create
@@ -17,7 +17,7 @@ module CurrentUser
     private
 
     def check_key
-      if ::CurrentUser::Config.instance.key != params[:key_id]
+      if ::CurrentUser.authentication_key != params[:key_id]
         render_unauthorized
       end
     end

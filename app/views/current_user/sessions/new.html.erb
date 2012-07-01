@@ -32,6 +32,6 @@
 <% @users.each do |user| %>
   <%= form_tag @sign_in_url do %>
     <%= hidden_field_tag 'user_id', user.id %>
-    <%= button_tag user.email, :type => 'text', :class => 'current_user_signin_button' %>
+    <%= submit_tag user.email, :class => 'current_user_signin_button' %>
   <% end %>
 <% end %>
