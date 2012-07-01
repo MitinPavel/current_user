@@ -2,7 +2,7 @@ require_dependency "current_user/application_controller"
 
 module CurrentUser
   class SessionsController < ApplicationController
-    before_filter :check_key
+    before_filter :check_key, :except => :destroy
 
     def new
       sign_out
@@ -13,6 +13,11 @@ module CurrentUser
       user = ::User.find params[:user_id]
       sign_in user
       redirect_to main_app.root_url
+    end
+
+    def destroy
+      new
+      render :new
     end
 
     private
