@@ -7,11 +7,15 @@ require "current_user/version"
 Gem::Specification.new do |s|
   s.name        = "current_user"
   s.version     = CurrentUser::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of CurrentUser."
-  s.description = "TODO: Description of CurrentUser."
+  s.authors     = ["Pavel Mitin"]
+  s.email       = ["mitin.pavel@gmail.com"]
+  s.homepage    = "https://github.com/MitinPavel/current_user"
+  s.summary     = "Dev phase auth for Rails"
+  s.description = <<-STR
+An authentication gem for the pre-production (mainly) phase of the application lifecycle.
+Provide a simple sign in page with a list of all users in the application.
+Click on any user logins you to the application under the user.
+  STR
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]

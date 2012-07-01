@@ -16,7 +16,7 @@ Dev phase auth for Rails.
 
 ## Getting started
 
-CurrentUser works with Rails 3.2. Add it to your Gemfile with:
+CurrentUser works with Rails 3.2. Add to your Gemfile:
 
 ```ruby
 gem 'current_user', :git => 'git://github.com/MitinPavel/current_user.git'
@@ -50,10 +50,21 @@ Specify root in `config/routes.rb`:
 root :to => 'dashboards#show'
 ```
 
+Add before filter to `app/controllers/application_controller.rb`:
+
+ ```ruby
+before_filter :authenticate_user!
+ ```
+
+Try to visit one of protected pages of your application (for example root). You will see "Unauthorized" error page.
+
 Run a rake task what shows a path to your sign in page:
 ```console
 rake current_user:sign_in_path
 ```
+
+Visit your sign in page. You will see a list of users of your application. Click on a user and the link
+will take you to the root page of the application.
 
 Congratulations. Your application has a simple authentication solution.
 
