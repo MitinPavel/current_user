@@ -29,6 +29,15 @@ class LoginTest < ActionDispatch::IntegrationTest
     assert_equal 401, page.status_code, 'Responds with the unauthorized http status code'
   end
 
+  test "empty users table" do
+    ::User.destroy_all
+
+    visit sing_in_page_path
+
+    assert page.has_content?("Your database doesn't contain users."),
+           'Show a message about an empty user table'
+  end
+
   test "all users in the application database are listed in the signin page" do end
   test "logout" do
     # login

@@ -27,11 +27,18 @@
   }
 </style>
 
-<h1>Sign in as</h1>
 
-<% @users.each do |user| %>
-  <%= form_tag @sign_in_url do %>
-    <%= hidden_field_tag 'user_id', user.id %>
-    <%= submit_tag ::CurrentUser.identifier_for(user), :class => 'current_user_signin_button' %>
-  <% end %>
-<% end %>
+<% if @users.any? %>
+    <h1>Sign in as</h1>
+
+    <% @users.each do |user| %>
+      <%= form_tag @sign_in_url do %>
+        <%= hidden_field_tag 'user_id', user.id %>
+        <%= submit_tag ::CurrentUser.identifier_for(user), :class => 'current_user_signin_button' %>
+      <% end %>
+    <% end %>
+ <% else %>
+    <h1>Sign in</h1>
+
+    Your database doesn't contain users. Please insert a few and reload the page.
+ <% end %>
