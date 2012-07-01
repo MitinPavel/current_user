@@ -16,7 +16,7 @@ module CurrentUser
       end
 
       def mount_routing
-        inject_into_file 'config/routes.rb', :after => "Rails.application.routes.draw do" do
+        inject_into_file 'config/routes.rb', :after => "routes.draw do" do
           "\n  mount CurrentUser::Engine => '/current_user'\n\n"
         end
       end

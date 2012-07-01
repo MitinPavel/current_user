@@ -5,7 +5,7 @@ namespace :current_user do
 
     unless key.blank?
       # TODO: use route helpers.
-      puts "/current_user/keys/#{key}/sign_in/new"
+      puts "/current_user/#{key}/sign_in"
     else
       puts 'Error: there is no authentication key. Check out config/current_user/key file.'
     end
