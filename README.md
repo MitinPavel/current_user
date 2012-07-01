@@ -5,13 +5,13 @@ Dev phase auth for Rails.
 ## What it is
 
 * A simple authentication gem for the development (pre-production) phase
-* Familiar rails conventions: #current_user, #signed_in? (and a few others) methods
+* Familiar rails conventions: #current_user, #signed_in?
 * A convenient signin page with a list of all available users (just click on a user and you will be logged in under the user)
 * An opportunity to replace it with one of the mature solution (assuming Devise)
 
 ## What it is not
 
-* An authentication solution for the production phase of your application lifecycle
+* An authentication solution for the production phase of the application lifecycle
 * An authorization gem (although in the future it might get some authorization features to mimic Devise)
 
 ## Getting started
