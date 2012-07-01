@@ -9,4 +9,9 @@
     config.authentication_key = key
   end
 
+  # Setup how users might be distinguished via UI.
+  # It might be a symbol, a string or a lambda.
+  # For the last case it might be:
+  # config.identifier = -> { |u| "User with email #{u.email}" }
+  config.identifier = :email
 end
