@@ -13,9 +13,16 @@ module CurrentUser
         ::User.find_by_id user_id
       end
 
+      def sign_in(user)
+        session[::CurrentUser::USER_SESSION_KEY] = user.id
+      end
+
+      def sign_out
+        session[::CurrentUser::USER_SESSION_KEY] = nil
+      end
+
       def signed_in?; end
       def user_signed_in?; end
-      def sign_out; end
 
       private
 

@@ -5,18 +5,22 @@ module CurrentUser
     before_filter :check_key
 
     def new
+      sign_out
       @users = users
     end
 
     def create
-      session[::CurrentUser::USER_SESSION_KEY] = params[:user_id]
+      user = ::User.find params[:user_id]
+      sign_in user
       redirect_to main_app.root_url
     end
 
     private
 
     def check_key
-      if ::CurrentUser.authentication_key != params[:key]
+      key = ::CurrentUser.authentication_key
+
+      if key.blank? || key != params[:key]
         render_unauthorized
       end
     end
