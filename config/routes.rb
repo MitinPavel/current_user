@@ -1,5 +1,4 @@
 CurrentUser::Engine.routes.draw do
-  resources :keys, :only => [] do
-    resource :sign_in, :controller => 'sessions', :only => [:new, :create]
-  end
+  match ':key/sign_in' => 'sessions#new', :via => :get, :as => 'sign_in'
+  match ':key/sign_in' => 'sessions#create', :via => :post
 end

@@ -50,7 +50,7 @@ class LoginTest < ActionDispatch::IntegrationTest
   private
 
   def sing_in_page_path(key = '12345')
-    "/current_user/keys/#{key}/sign_in/new"
+    "/current_user/#{key}/sign_in"
   end
 end
 

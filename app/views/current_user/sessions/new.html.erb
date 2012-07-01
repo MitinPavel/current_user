@@ -32,7 +32,7 @@
     <h1>Sign in as</h1>
 
     <% @users.each do |user| %>
-      <%= form_tag @sign_in_url do %>
+      <%= form_tag request.path do %>
         <%= hidden_field_tag 'user_id', user.id %>
         <%= submit_tag ::CurrentUser.identifier_for(user), :class => 'current_user_signin_button' %>
       <% end %>
