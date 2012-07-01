@@ -6,7 +6,7 @@ Dev phase auth for Rails.
 
 * A simple authentication gem for the development (pre-production) phase
 * Familiar rails conventions: #current_user, #signed_in?
-* A convenient signin page with a list of all available users (just click on a user and you will be logged in under the user)
+* A minimalistic signin page with a list of all available users (just click on a user and you will be logged in under the user)
 * An opportunity to replace it with one of the mature solution (assuming Devise)
 
 ## What it is not
@@ -28,9 +28,8 @@ Install it using bundler:
 bundle install
 ```
 
-__Note__: CurrentUser assumes your application already has a few users in its database.
-So if the assumption is false, please see "Add users to database" section
-and return to the getting started guide.
+__Note__: CurrentUser assumes your application already has a few users.
+So if the assumption is false, create User active record class AND/OR add several users to the database. 
 
 Run the generator:
 
@@ -67,21 +66,6 @@ Visit your sign in page. You will see a list of users of your application. Click
 will take you to the root page of the application.
 
 Congratulations. Your application has a simple authentication solution.
-
-## Add users to database
-
-CurrentUser assumes your application already has a few users in a database.
-So if the assumption is false, generate User activerecord model and insert users in db. It might look like:
-
-```console
-rails g model User email:string
-bundle exec rake db:migrate
-rails c
-```
-
-```ruby
-User.create! :email => 'some.email@mailinator.com'
-```
 
 ## License
 
