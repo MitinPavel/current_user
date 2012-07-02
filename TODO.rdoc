@@ -1,5 +1,6 @@
 = TODO
 
+* Remember a requested url and redirect to the url after successful sign in 
 * Add an ability to use an arbitrary class instead of User.
 * Create rake tasks to recreate the auth key and to display how the signin url looks like
 * Uniform "signin" and "sign in"
