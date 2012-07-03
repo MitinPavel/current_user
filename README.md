@@ -75,12 +75,6 @@ CurrentUser creates some helpers to use inside your controllers and views.
 To verify if a user is signed in, use the following helper:
 
 ```ruby
-user_signed_in?
-```
-
-or
-
-```ruby
 signed_in?
 ```
 
