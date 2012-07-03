@@ -3,5 +3,6 @@
 tmp/
 test/dummy/log/
 test/dummy/db/development.sqlite3
+test/dummy/db/test.sqlite3
 test/dummy/tmp/
 test/dummy/config/current_user/key

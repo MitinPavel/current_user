@@ -65,7 +65,8 @@ rake current_user:sign_in_path
 Visit your sign in page. You will see a list of users of your application. Click on a user and the link
 will take you to the root page of the application.
 
-Congratulations. Your application has a simple authentication solution.
+Congratulations. Your application has a simple authentication solution. _Send a link to the sign in page
+to your customer and she/he will love to test your app manually :)_
 
 ## Helpers
 
