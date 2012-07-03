@@ -2,9 +2,8 @@ module CurrentUser
   module Controller
     module Helpers
       def self.included(base)
-        helpers = %w(authenticate_user! current_user sign_in sign_out signed_in? user_signed_in?)
-        base.hide_action *helpers
-        base.helper_method *helpers
+        base.hide_action %w(authenticate_user! current_user sign_in sign_out signed_in? user_signed_in?)
+        base.helper_method %w(current_user signed_in? user_signed_in?)
       end
 
       def authenticate_user!

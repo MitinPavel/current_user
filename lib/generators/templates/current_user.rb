@@ -1,7 +1,6 @@
 ::CurrentUser.setup do |config|
 
-  # Setup an authentication key.
-  # If you want to have a custom key, it might look like:
+  # If you want to have a custom authentication key, it might look like:
   # config.authentication_key = '4242424242424242'
   config.authentication_key = ::CurrentUser.read_authentication_key
 

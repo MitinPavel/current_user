@@ -67,6 +67,28 @@ will take you to the root page of the application.
 
 Congratulations. Your application has a simple authentication solution.
 
+## Helpers
+
+CurrentUser creates some helpers to use inside your controllers and views.
+
+To verify if a user is signed in, use the following helper:
+
+```ruby
+user_signed_in?
+```
+
+or
+
+```ruby
+signed_in?
+```
+
+For the current signed-in user, this helper is available:
+
+```ruby
+current_user
+```
+
 ## License
 
 It uses MIT license. See MIT-LICENSE file in the root directory.
