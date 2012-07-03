@@ -1,6 +1,6 @@
 .idea/
 
 test/dummy/log/
-test/dummy/db/
+test/dummy/db/development.sqlite3
 test/dummy/tmp/
 test/dummy/config/current_user/key

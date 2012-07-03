@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    current_user (0.0.1)
+    current_user (0.1.0)
       rails (~> 3.2.6)
 
 GEM
