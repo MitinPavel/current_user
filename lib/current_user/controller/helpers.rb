@@ -26,8 +26,9 @@ module CurrentUser
         session[::CurrentUser::USER_SESSION_KEY] = nil
       end
 
-      def signed_in?; end
-      def user_signed_in?; end
+      def signed_in?
+        current_user.present?
+      end
 
       private
 
