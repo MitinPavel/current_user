@@ -1,5 +1,6 @@
 .idea/
 
+tmp/
 test/dummy/log/
 test/dummy/db/development.sqlite3
 test/dummy/tmp/

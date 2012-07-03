@@ -4,14 +4,14 @@ Feature: Current user generators
   I use CurrentUser's generators
 
   Background:
-    When I successfully run `rails new dummy_app`
-    And I cd to "dummy_app"
+    When I run `cp -r ../../seed/aruba_dummy dummy`
+    And I cd to "dummy"
 
     And I append to "Gemfile" with "gem 'current_user', :path => '../../..'"
     And I successfully run `bundle install`
-    Then the file "Gemfile.lock" should match /current_user/
 
-  Scenario: Key generation
+  Scenario: Authentication key generation
     Then a file named "config/current_user/key" should not exist
     When I successfully run `rails generate current_user:install`
     Then a file named "config/current_user/key" should exist
+    And the file "config/current_user/key" should match /^[a-f0-9]{40}$/
