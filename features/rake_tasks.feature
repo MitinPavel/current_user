@@ -12,6 +12,5 @@ Feature: Current user rake tasks
       """
       42
       """
-
     When I successfully run `rake current_user:sign_in_path`
     Then the output should contain "/current_user/42/sign_in"
