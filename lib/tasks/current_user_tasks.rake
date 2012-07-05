@@ -3,7 +3,7 @@ namespace :current_user do
   task :sign_in_path => :environment  do
     key =  ::CurrentUser.authentication_key
 
-    unless key.blank?
+    if key.present?
       # TODO: use route helpers.
       puts "/current_user/#{key}/sign_in"
     else
