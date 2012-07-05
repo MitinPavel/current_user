@@ -2,6 +2,8 @@
 
 # CurrentUser
 
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/MitinPavel/current_user)
+
 Dev phase auth for Rails.
 
 ## What it is
