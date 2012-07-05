@@ -4,8 +4,8 @@ namespace :current_user do
     key =  ::CurrentUser.authentication_key
 
     if key.present?
-      # TODO: use route helpers.
-      puts "/current_user/#{key}/sign_in"
+      include Rails.application.routes.url_helpers
+      puts "#{current_user_path}/#{key}/sign_in"
     else
       # TODO: extract KEY_FILE_PATH constant.
       puts 'Error: there is no authentication key. Check out config/current_user/key file.'

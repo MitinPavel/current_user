@@ -4,11 +4,7 @@ Feature: Current user generators
   I use CurrentUser's generators
 
   Background:
-    When I run `cp -r ../../seed/aruba_dummy dummy`
-    And I cd to "dummy"
-
-    And I append to "Gemfile" with "gem 'current_user', :path => '../../..'"
-    And I successfully run `bundle install`
+    Given a new rails application
 
   Scenario: Authentication key generation
     Then a file named "config/current_user/key" should not exist
