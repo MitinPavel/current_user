@@ -1,3 +1,5 @@
+[![The Sopranos](http://i.minus.com/irnTZ9R2xPyzi.png)](http://www.imdb.com/title/tt0141842/)
+
 # CurrentUser
 
 Dev phase auth for Rails.
