@@ -36,5 +36,9 @@ Rake::TestTask.new(:test) do |t|
   t.verbose = false
 end
 
+require 'cucumber/rake/task'
+Cucumber::Rake::Task.new do |features|
+end
 
+task :test =>  :cucumber
 task :default => :test
