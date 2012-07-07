@@ -1,0 +1,4 @@
+<%= form_tag request.path do %>
+  <%= hidden_field_tag 'user_id', user.id %>
+  <%= submit_tag ::CurrentUser.identifier_for(user), :class => 'current_user_signin_button' %>
+<% end %>

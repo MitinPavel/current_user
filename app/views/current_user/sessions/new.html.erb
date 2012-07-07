@@ -1,3 +1,13 @@
+<%= render :partial => 'header' %>
+
+<% if @users.any? %>
+    <%= render :partial => 'user', :collection => @users %>
+<% else %>
+    <%= render 'add_users_message' %>
+ <% end %>
+
+<!--CSS-->
+
 <style type="text/css">
   /* Grabbed from here: http://www.456bereastreet.com/archive/201110/styling_button_elements_to_look_like_links/ */
   .current_user_signin_button {
@@ -26,19 +36,3 @@
       border:0;
   }
 </style>
-
-
-<% if @users.any? %>
-    <h1>Sign in as</h1>
-
-    <% @users.each do |user| %>
-      <%= form_tag request.path do %>
-        <%= hidden_field_tag 'user_id', user.id %>
-        <%= submit_tag ::CurrentUser.identifier_for(user), :class => 'current_user_signin_button' %>
-      <% end %>
-    <% end %>
- <% else %>
-    <h1>Sign in</h1>
-
-    Your database doesn't contain users. Please insert a few and reload the page.
- <% end %>
