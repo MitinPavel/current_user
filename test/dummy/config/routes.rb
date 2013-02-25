@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root :to => 'my_protected_pages#show'
 
   resource :my_protected_page, :only => :show
+  resource :my_another_protected_page, :only => :show
 
   match 'helpers/(:action)', :controller => :helpers
 

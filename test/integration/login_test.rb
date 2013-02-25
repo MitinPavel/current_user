@@ -22,6 +22,13 @@ class LoginTest < ActionDispatch::IntegrationTest
     assert_user_sees_unauthorized_error
   end
 
+  test "stored location" do
+    visit '/my_another_protected_page'
+    assert_user_sees_unauthorized_error
+    sign_in
+    assert page.has_content?("My another protected page"), 'Redirects to the stored location'
+  end
+
   test "invalide key" do
     invalid_key = '54321'
     visit sing_in_page_path(invalid_key)
