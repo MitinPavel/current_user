@@ -12,7 +12,8 @@ module CurrentUser
     def create
       user = ::User.find params[:user_id]
       sign_in user
-      redirect_to main_app.root_url
+      redirect_to after_sign_in_url
+      erase_stored_location
     end
 
     def destroy
@@ -39,6 +40,14 @@ module CurrentUser
       else
         ::User.order identifier.to_s
       end
+    end
+
+    def after_sign_in_url
+      session[::CurrentUser::STORED_LOCATION_KEY] || main_app.root_url
+    end
+
+    def erase_stored_location
+      session.delete ::CurrentUser::STORED_LOCATION_KEY
     end
   end
 end

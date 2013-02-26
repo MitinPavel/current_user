@@ -9,6 +9,7 @@ module CurrentUser
       def authenticate_user!
         if current_user.nil?
           render_unauthorized
+          store_location
         end
       end
 
@@ -34,6 +35,10 @@ module CurrentUser
 
       def render_unauthorized
         render :text => 'Unauthorized', :status => :unauthorized
+      end
+
+      def store_location
+        session[::CurrentUser::STORED_LOCATION_KEY] = request.url
       end
     end
   end
