@@ -1,14 +1,17 @@
-===============================================================================
+========================================================================
 
-1. Ensure you have root_url in your config/routes.rb.
+1. [REQUIRED] Ensure you have root_url in your config/routes.rb.
    For example: root :to => "home#index"
 
-2. Run 'rake current_user:sign_in_path' to see a path to your sign in page.
+2. [OPTIONAL] Run 'rake current_user:sign_in_path'
+   to see a path to your sign in page.
 
-3. Customize configuration using 'config/initializers/current_user.rb'
+3. [OPTIONAL] Customize configuration
+   using 'config/initializers/current_user.rb'
 
-4. Customize a unique authentication token for your application
+4. [OPTIONAL] Customize a unique authentication token
+   for your application
    by changing 'config/current_user/key'
    Note: only the first line of the key file will be taken into account.
 
-===============================================================================
+========================================================================
