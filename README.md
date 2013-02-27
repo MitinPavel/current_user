@@ -1,4 +1,4 @@
-[![The Sopranos](http://i.minus.com/irnTZ9R2xPyzi.png)](http://www.imdb.com/title/tt0141842/)
+[![CurrentUser on RubyGems](http://i.minus.com/irnTZ9R2xPyzi.png)](http://rubygems.org/gems/current_user)
 
 # CurrentUser
 
