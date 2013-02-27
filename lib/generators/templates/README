@@ -1,15 +1,20 @@
 ========================================================================
 
-1. [REQUIRED] Ensure you have root_url in your config/routes.rb.
+1. [REQUIRED] Make sure you have 'User' model with 'email' column.
+
+2. [REQUIRED] Insert to 'app/controllers/application_controller.rb':
+   before_filter :authenticate_user!
+
+3. [REQUIRED] Ensure you have root_url in your config/routes.rb.
    For example: root :to => "home#index"
 
-2. [OPTIONAL] Run 'rake current_user:sign_in_path'
+4. [REQUIRED] Run 'rake current_user:sign_in_path'
    to see a path to your sign in page.
 
-3. [OPTIONAL] Customize configuration
+5. [OPTIONAL] Customize configuration
    using 'config/initializers/current_user.rb'
 
-4. [OPTIONAL] Customize a unique authentication token
+6. [OPTIONAL] Customize a unique authentication token
    for your application
    by changing 'config/current_user/key'
    Note: only the first line of the key file will be taken into account.
