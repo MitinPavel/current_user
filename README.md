@@ -19,6 +19,10 @@ Dev phase auth for Rails.
 * An authentication solution for the production phase of the application lifecycle
 * An authorization gem (although in the future it might get some authorization features to mimic Devise)
 
+## How it looks like
+
+[![Screenshot of the sign in page](https://lh4.googleusercontent.com/-voA20pChU8M/US5ssDmBS3I/AAAAAAAAATo/BA9mV3MYXk0/s772/current_user_screenshot.png)]
+
 ## Getting started
 
 CurrentUser works with Rails 3.2. Add to your Gemfile:
