@@ -26,7 +26,7 @@ Dev phase auth for Rails.
 CurrentUser works with Rails 3.2. Add to your Gemfile:
 
 ```ruby
-gem 'current_user', '~> 0.0.1'
+gem "current_user", "~> 0.2.0"
 ```
 
 Install it using bundler:
