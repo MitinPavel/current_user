@@ -1,5 +1,3 @@
-[![CurrentUser on RubyGems](http://i.minus.com/irnTZ9R2xPyzi.png)](http://rubygems.org/gems/current_user)
-
 # CurrentUser
 
 [![Build Status](https://secure.travis-ci.org/MitinPavel/current_user.png?branch=master)](http://travis-ci.org/MitinPavel/current_user)
@@ -92,6 +90,10 @@ For the current signed-in user, this helper is available:
 ```ruby
 current_user
 ```
+
+## Logo
+
+[![CurrentUser on RubyGems](http://i.minus.com/irnTZ9R2xPyzi.png)](http://rubygems.org/gems/current_user)
 
 ## License
 
