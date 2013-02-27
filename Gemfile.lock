@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    current_user (0.1.0)
-      rails (~> 3.2.12)
+    current_user (0.2.0)
+      rails (~> 3.2)
 
 GEM
   remote: http://rubygems.org/
