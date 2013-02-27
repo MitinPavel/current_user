@@ -1,0 +1,3 @@
+== 0.1.0
+
+* Redirect back to current page after sign in. 
