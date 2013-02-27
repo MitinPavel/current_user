@@ -21,7 +21,7 @@ Dev phase auth for Rails.
 
 ## How it looks like
 
-[![Screenshot of the sign in page](https://lh4.googleusercontent.com/-voA20pChU8M/US5ssDmBS3I/AAAAAAAAATo/BA9mV3MYXk0/s772/current_user_screenshot.png)]
+[![Screenshot of the sign in page](https://lh3.googleusercontent.com/-fft8seAAZok/US50C-4PxPI/AAAAAAAAAUE/73jy9XkwQt0/s743/current_user_screenshot.png)]
 
 ## Getting started
 
