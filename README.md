@@ -23,7 +23,7 @@ Dev phase auth for Rails.
 
 ## Getting started
 
-CurrentUser works with Rails 3.2 and 4.0.
+CurrentUser works with Rails 3.2 and 4.0 using Ruby 1.9.3 or Ruby 2.0.
 
 Add to your Gemfile:
 
