@@ -1,7 +1,12 @@
 # Be sure to restart your server when you modify this file.
 
-# Your secret key for verifying the integrity of signed cookies.
+# Your secret key is used for verifying the integrity of signed cookies.
 # If you change this key, all old signed cookies will become invalid!
+
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-ArubaDummyAppSeed::Application.config.secret_token = 'c4ab40318c708f223c77b9b0bdeb42a358df2c8a83ad07fa084c4d790992c683327ae4f364db774aa94ac3151377fae605f8ce5638a3490bd87ebaa922187e7a'
+# You can use `rake secret` to generate a secure secret key.
+
+# Make sure your secret_key_base is kept private
+# if you're sharing your code publicly.
+Dummy::Application.config.secret_key_base = 'c2d62210327b2b9a7536773cbb2670dcb281d883124aa44e9991af00516c9c2dc47be759d02ea8c73736d260ba8f0bb377b7770dcd216c375c6f09ca2c1fe494'
