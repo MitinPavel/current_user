@@ -21,7 +21,8 @@ Click on any user logins you to the application under the user.
   s.extra_rdoc_files = ["README.md"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", "~> 3.2"
+  #s.add_dependency "rails", ">= 3.2.6", "< 5"
+  s.add_dependency "rails", "4.0.0"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency 'capybara'
