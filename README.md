@@ -23,10 +23,12 @@ Dev phase auth for Rails.
 
 ## Getting started
 
-CurrentUser works with Rails 3.2. Add to your Gemfile:
+CurrentUser works with Rails 3.2 and 4.0.
+
+Add to your Gemfile:
 
 ```ruby
-gem "current_user", "~> 0.2.0"
+gem "current_user"
 ```
 
 Install it using bundler:
@@ -36,7 +38,9 @@ bundle install
 ```
 
 __Note__: CurrentUser assumes your application already has a few users.
-So if the assumption is false, create User active record class AND/OR add several users to the database. 
+So if the assumption is false, create User active record class AND/OR add several users to the database.
+It also assumes User has "email" attribute/method. If it is not the case, add "email" or change configuration
+in `config/initializers/current_user.rb`.
 
 Run the generator:
 
